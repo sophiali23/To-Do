@@ -6,18 +6,22 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
-struct Task: Identifiable {
-    var id: String = UUID().uuidString
+struct Task: Codable, Identifiable {
+    @DocumentID var id: String?
     var title: String
     var completed: Bool
+    @ServerTimestamp var createdTime: Timestamp?
+    var userId: String?
 }
 
 #if DEBUG
 let testDataTasks = [
-  Task(title: "Workout", completed: true),
-  Task(title: "Do Laundry", completed: false),
-  Task(title: "Buy Groceries", completed: false),
-  Task(title: "Feed Cat", completed: false)
+    Task(title: "Workout", completed: true),
+    Task(title: "Do Laundry", completed: false),
+    Task(title: "Buy Groceries", completed: false),
+    Task(title: "Feed Cat", completed: false)
 ]
 #endif

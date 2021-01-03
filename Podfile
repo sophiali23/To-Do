@@ -11,7 +11,9 @@ target 'To Do' do
   pod 'Firebase/Analytics'
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
-  pod 'Firebase/Auth'
+  pod 'Firebase/Auth', '~> 6.2'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   target 'To DoTests' do
     inherit! :search_paths

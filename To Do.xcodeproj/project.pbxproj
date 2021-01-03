@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1D0777D91C80FAF218F6BC99 /* Pods_To_DoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCE08E0706F38C93F3811FA /* Pods_To_DoTests.framework */; };
+		6E50F76825A074F400455F40 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E50F76725A074F400455F40 /* TaskRepository.swift */; };
+		6E50F78725A1429800455F40 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E50F78625A1429800455F40 /* SignInWithAppleButton.swift */; };
+		6E50F79425A143A900455F40 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E50F79325A143A900455F40 /* SignInView.swift */; };
+		6E50F79A25A1587700455F40 /* SignInWithAppleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E50F79925A1587700455F40 /* SignInWithAppleCoordinator.swift */; };
 		6E8D8B8825A0323C001A4B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D8B8725A0323C001A4B8D /* AppDelegate.swift */; };
 		6E8D8B8A25A0323C001A4B8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D8B8925A0323C001A4B8D /* SceneDelegate.swift */; };
 		6E8D8B8C25A0323C001A4B8D /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D8B8B25A0323C001A4B8D /* TaskListView.swift */; };
@@ -48,6 +52,11 @@
 		2C692A827F28FD464650DEBD /* Pods-To Do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do.release.xcconfig"; path = "Target Support Files/Pods-To Do/Pods-To Do.release.xcconfig"; sourceTree = "<group>"; };
 		2C74170CFF06BDB88DB835DD /* Pods_To_Do_To_DoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_To_DoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A1BD93A4AE878F92A96C60 /* Pods-To Do-To DoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do-To DoUITests.release.xcconfig"; path = "Target Support Files/Pods-To Do-To DoUITests/Pods-To Do-To DoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6E50F76725A074F400455F40 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		6E50F78625A1429800455F40 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		6E50F79325A143A900455F40 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		6E50F79925A1587700455F40 /* SignInWithAppleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleCoordinator.swift; sourceTree = "<group>"; };
+		6E50F7A125A15F4100455F40 /* To Do.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "To Do.entitlements"; sourceTree = "<group>"; };
 		6E8D8B8425A0323C001A4B8D /* To Do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8D8B8725A0323C001A4B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E8D8B8925A0323C001A4B8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +118,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6E50F76325A074AD00455F40 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				6E50F76725A074F400455F40 /* TaskRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6E50F79825A1584900455F40 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6E50F79925A1587700455F40 /* SignInWithAppleCoordinator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		6E8D8B7B25A0323C001A4B8D = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +159,11 @@
 		6E8D8B8625A0323C001A4B8D /* To Do */ = {
 			isa = PBXGroup;
 			children = (
-				6E8D8BBA25A03281001A4B8D /* Models */,
+				6E50F7A125A15F4100455F40 /* To Do.entitlements */,
 				6E8D8BC625A033F7001A4B8D /* App */,
+				6E50F79825A1584900455F40 /* Services */,
+				6E50F76325A074AD00455F40 /* Repositories */,
+				6E8D8BBA25A03281001A4B8D /* Models */,
 				6E8D8BCE25A0401F001A4B8D /* ViewModels */,
 				6E8D8BC725A03404001A4B8D /* Views */,
 				6E8D8B8D25A0323F001A4B8D /* Assets.xcassets */,
@@ -194,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				6E8D8B8B25A0323C001A4B8D /* TaskListView.swift */,
+				6E50F78625A1429800455F40 /* SignInWithAppleButton.swift */,
+				6E50F79325A143A900455F40 /* SignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,7 +247,6 @@
 				0B7084DEC43E34A9EBFAA7AD /* Pods-To DoTests.debug.xcconfig */,
 				DC677DA98E27FBD076D3515F /* Pods-To DoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -460,12 +489,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E50F79A25A1587700455F40 /* SignInWithAppleCoordinator.swift in Sources */,
+				6E50F79425A143A900455F40 /* SignInView.swift in Sources */,
+				6E50F78725A1429800455F40 /* SignInWithAppleButton.swift in Sources */,
 				6E8D8BBC25A032B2001A4B8D /* Task.swift in Sources */,
 				6E8D8B8825A0323C001A4B8D /* AppDelegate.swift in Sources */,
 				6E8D8B8A25A0323C001A4B8D /* SceneDelegate.swift in Sources */,
 				6E8D8B8C25A0323C001A4B8D /* TaskListView.swift in Sources */,
 				6E8D8BD025A04121001A4B8D /* TaskCellViewModel.swift in Sources */,
 				6E8D8BD825A0466C001A4B8D /* TaskListViewModel.swift in Sources */,
+				6E50F76825A074F400455F40 /* TaskRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,8 +667,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "To Do/To Do.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"To Do/Preview Content\"";
+				DEVELOPMENT_TEAM = CF58V3KPA7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "To Do/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -655,8 +690,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "To Do/To Do.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"To Do/Preview Content\"";
+				DEVELOPMENT_TEAM = CF58V3KPA7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "To Do/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
