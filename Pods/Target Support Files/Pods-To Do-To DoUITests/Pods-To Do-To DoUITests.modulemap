@@ -1,6 +1,0 @@
-framework module Pods_To_Do_To_DoUITests {
-  umbrella header "Pods-To Do-To DoUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
